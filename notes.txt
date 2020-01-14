@@ -1,3 +1,85 @@
 Intro to Azure
 ------------------
 
+## Creating Account
+0. www.azure.com ==>> Start for free
+1. login with live (hotmail) account
+2. Form / phone
+
+Once account setup login to:
+
+https://portal.azure.com
+
+
+##########################################################################
+##  Azure fundamentals
+##########################################################################
+Data does not leave an Azure region unless specifically executed to.
+
+
+## Resiliency and Availability (within a region)
+##
+
+36 Regions w/ additional 8 coming soon
+
+ - Single VM
+
+ - Availability Set:  2 or more fault domains (share common power source & network switch)
+        - VMs in Availability distributed across fault domains
+            - across physical servers, compute racks, storage and network switches
+
+ - Availability Zone:  Different physical zones (datacenters) within
+                       Azure region (geographic area)
+                       Helps prevent datacenter loss
+                       (Currently preview)
+
+ - Paired Region :  Protect against regional outage.  Deploy app across multiple
+                    regions. Azure Traffic Manager to distribute traffice across
+                    regions. Regions within a Paried Region are located within
+                    the same geography. (Exception is Brazil South Region)
+
+    NOTE: Need to take into account latency across regions !!
+
+## Subscriptions
+##
+Subscription:  An agreement with Microsoft to use one or more cloud platforms
+               or services.  Pay for services on consumption model.
+
+  - Organizations can have multiple Azure Subscriptions
+        -env / geography based / function based
+
+  - Subscriptions integrate with Azure Active Directory
+      - multiple subscriptions can trust one directory
+      - a subscription can trust only one directory
+
+  - Azure resources will reside within a subscription
+
+## Azure Resource Manager
+##
+
+Azure Resource Manager: Underlying service for deploying and managing resources
+      in Azure.
+Terminology:
+  Resources:  Manageable items available for Azure.
+     VMs, Storage Acct, Web Apps, DBs, virtual network
+
+Resource Groups:  Where to deploy resources. Container of related resources.
+  If deploying resources for an app together than resources should belong to
+  the same resource group
+
+Resource Providers: Service that supplies the resources available to
+  Resource Manager.
+    Product groups create a Resource Provider for the product.
+      i.e. Microsoft dot compute , dot storage
+
+Resource Manager Templates:  JSON file that defines one or more resources to
+  deploy to a Resource Group.  Resource template for cloud services.
+   - defines dependencies between resources
+   - deploy same dev / test / prod
+   - Infrastructure as Code (like Cloud Formation)
+
+
+
+
+
+[.]
