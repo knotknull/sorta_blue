@@ -79,6 +79,118 @@ Resource Manager Templates:  JSON file that defines one or more resources to
    - Infrastructure as Code (like Cloud Formation)
 
 
+##########################################################################
+##  Azure Services
+##########################################################################
+  - Virtual Machines
+  - App Service
+  - Functions
+  - Batch
+  - Container Services
+  - Container Instances
+  - Service Fabric
+  - Cloud Services
+
+
+##  Azure Compute
+##
+
+Windows / Linux VM on demand
+
+Distros: CentOS, CoreOS, Debian, Oracle Linux, RHEL, SUSE LES, openSUSE, Ubuntu
+
+Can use a virual hard disk (VHD) as well
+
+ - 6 Types of VM (storage optimized, IO optimized, etc.)
+ - 28 Families
+ - set amount of vCPUs, Memory, Temporary Storage
+      - can attach data disks
+ - billed per minute
+ - Reserved VM Instances gives significant discount
+ - similar to EC2
+
+
+##  Azure Service
+##
+
+- Platform as a Service
+- Completely managed environment
+- .Net, .Net Core, Java, Ruby, Node.JS, PHP or Python
+- Web Apps / APIs / Mobile Backends / Containers
+- Windows and Linux
+
+App Service Plans:  from Free to Isolated Environments
+
+
+##  Azure Functions
+##
+
+- Serverless Compute - run code on demand
+- Function as a Service (like Lambda)
+- Execute code in response to events or Triggers
+- Only pay when your code is executed
+- Languages:  C#, F#, Javascript, Node.js, Java
+
+Part of App Service and can run within an App Service Plan
+
+First 1 million executions / month free
+
+
+##  Azure Batch
+##
+
+- Managed service for batch processing jobs
+- Used for running large scale parallel and HPC workloads efficiently
+- Scale processes to as many compute cores as required
+- Supports both windows and linux compute nodes
+- Batch is free, just pay for resources you are running
+
+
+##  Azure Container Service (ACS) ==>> Azure Container Service for Kubernetes (AKS)
+##
+
+- Managed Kubernetes Container Orchestration
+- Auto upgrades / patching
+- Support for other orchestrators (but not managed)
+  - DC/OS, Un-managed Kubernetes, Docker Swarm
+- Only pay for agent nodes not masters
+
+
+##  Azure Container Instances
+##
+- Containers as a service  (good for only one container)
+- Fast and easy way to run a container in Azure
+- Containers get a public IP address
+- Can design container spec yourself (CPU / RAM)
+- Supports both windows and linux containers
+- Per-second billing
+
+
+##  Azure Service Fabric
+##
+
+- Orchestrator / Platform for running microservices / containers (not Kubernetes)
+- Used by a lot of Azure and MS services
+  - Skype for Business, Cortana, CosmosDB, Dynamics 365
+- Can run anywhere, other clouds, on premises. SDK is identical
+- Supports Stateful and Stateless microservices
+- Popular among .Net community but supports other languages and containers too
+- Utilizes high density container architecture for scale and performance
+
+
+##  Azure Cloud Services (Classic Cloud Services)
+##
+
+- Original PaaS offering from Azure
+- Similar to App Service but you can remote into the VMs and install software
+- Web Roles - Websites
+- Worker Roles - Async processing
+- Recommended to use App Services instead of Cloud Services
+
+
+
+
+
 
 
 
