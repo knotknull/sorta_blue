@@ -80,7 +80,7 @@ Resource Manager Templates:  JSON file that defines one or more resources to
 
 
 ##########################################################################
-##  Azure Services
+##  Azure Compute Services
 ##########################################################################
   - Virtual Machines
   - App Service
@@ -186,6 +186,137 @@ First 1 million executions / month free
 - Web Roles - Websites
 - Worker Roles - Async processing
 - Recommended to use App Services instead of Cloud Services
+
+
+##########################################################################
+##  Azure Networking
+##########################################################################
+
+
+##  Virtual Networks
+##
+
+- Isolated Network within Azure
+- Hosts:  VMs, VM Scale sets, App Service Environments
+- Composed of subnets
+- User Defined Routes
+- Security Groups @ virtual network and virtual machine levels
+- Outbound internet access
+- VNET Peering:  can peer within and across regions
+- Service Endpoints:  Access services within VNET (private connection to service)
+VNET ==>> VPC
+
+
+
+##  Load Balancer
+##
+
+- Basic load balancer functionality for your VMs
+- Operates at Layer 4
+- Public or Internal
+- HTTP or TCP load balancing / hash based load balancing
+- Standard Load Balancer in preview (Feb 2018)
+  - HA Ports (UDP and TCP)
+  - AZ Aware (load balance across AZs)
+==>> ELB
+
+
+##  Application Gateway
+##
+
+- Layer 7 Load Balancing in Azure
+- HTTP Based Round Robin
+- SSL Offload
+- Cookie Based Session Affinity
+- Web Socket Support
+- Integrated Web Application Firewall
+- Internal / External Load Balancing
+
+
+
+##  VPN Gateway
+##
+
+- Managed VPN in the cloud
+- Site to Site (S2S) or Point to Site (P2S)
+- Establish encrypted connections
+  - Azure -> On Premises
+  - Azure -> Azure (Multi-Region)
+- One VPN Gateway per VNET    ***
+  - Multiple connctions per VPN Gateway  ***
+
+- Policty Based (Static) or Route Based (Dynamic)
+==>> AWS VPN Gateway
+
+
+
+##  Azure DNS
+##
+
+- Domain Name Systems
+- Host your DNS Domains
+- Utilize the same credentials as your infrastructure
+- Cannot purchase domain names
+- Pay per zone per month, then per million queries
+- Private domain in preview
+==>> AWS Route53
+
+
+##  Traffic Manager
+##
+
+- Global traffic router
+- Point to internal / external end points
+- Uses DNS to select best available endpoint
+- 4 traffic routing methods
+  - priority
+  - weighted
+  - performance
+  - geographic
+- Health checks can be customized
+- Routing method and health determine where traffic goes
+- Can be used for multi-region architectures
+==>> AWS Route53
+
+
+##  Content Delivery Network
+##
+
+- Improve performance by getting closer to users
+- Typically used for static assets (images, etc)
+- Dynamic Site Acceleration (DSA)
+- Service provided by Akamai and Verizon
+- Standard / Premium option available (Verizon only)
+    - premium == token auth and url redirection
+
+- Pay per GB outbound per month. Varies based on zone.
+==>> AWS CloudFront
+
+##  Express Route
+##
+
+- Private connection into Azure
+- Up to 10Gbps
+- Replaces VPNs
+- Two connection options
+  - Private link to an Exchange Provider Facility
+  - Add an ExpressRoute link to you MPLS Network
+- Multiple subscriptions can be linked to a single circuit
+- Hybrid / Disaster Recovery
+==>> AWS DirectConnect
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
