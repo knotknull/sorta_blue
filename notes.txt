@@ -34,8 +34,8 @@ Data does not leave an Azure region unless specifically executed to.
                        (Currently preview)
 
  - Paired Region :  Protect against regional outage.  Deploy app across multiple
-                    regions. Azure Traffic Manager to distribute traffice across
-                    regions. Regions within a Paried Region are located within
+                    regions. Azure Traffic Manager to distribute traffic across
+                    regions. Regions within a Paired Region are located within
                     the same geography. (Exception is Brazil South Region)
 
     NOTE: Need to take into account latency across regions !!
@@ -99,7 +99,7 @@ Windows / Linux VM on demand
 
 Distros: CentOS, CoreOS, Debian, Oracle Linux, RHEL, SUSE LES, openSUSE, Ubuntu
 
-Can use a virual hard disk (VHD) as well
+Can use a virtual hard disk (VHD) as well
 
  - 6 Types of VM (storage optimized, IO optimized, etc.)
  - 28 Families
@@ -243,7 +243,7 @@ VNET ==>> VPC
   - Azure -> On Premises
   - Azure -> Azure (Multi-Region)
 - One VPN Gateway per VNET    ***
-  - Multiple connctions per VPN Gateway  ***
+  - Multiple connections per VPN Gateway  ***
 
 - Policty Based (Static) or Route Based (Dynamic)
 ==>> AWS VPN Gateway
@@ -300,10 +300,108 @@ VNET ==>> VPC
 - Replaces VPNs
 - Two connection options
   - Private link to an Exchange Provider Facility
-  - Add an ExpressRoute link to you MPLS Network
+  - Add an Express Route link to you MPLS Network
 - Multiple subscriptions can be linked to a single circuit
 - Hybrid / Disaster Recovery
 ==>> AWS DirectConnect
+
+
+##########################################################################
+##  Azure Storage
+##########################################################################
+
+
+##  Azure Storage
+##
+ - Collection of Storage services
+ - Storage Account is the parent object
+ - Transfer to / from a specific service within a storage account
+ - 500 TB limit per Storage Account
+ - Standard (HDD) or Premium (SSD) Accounts
+    - Premium only for disks
+ - Various Replication available:
+    - Locally Redundant Storage (LRS)
+    - Zone Redundant Storage (ZRS)
+    - Geo Redundant (Multi-Region) Storage (GRS)
+    - Read Access Geo Redundant (Multi-Region) Storage (RA-GRS)
+        - Read data from both regions replicated
+
+ - Various Tiers:
+    - Archive (BLOB only)
+    - Cool (read infrequently)
+    - Hot  (read regularly)
+
+##  BLOB Storage
+##
+  - Internet Accessible Object Store
+  - Store large amounts of unstructured data
+  - HTTP or HTTPS
+  - Public or Private Options
+  - Storage Account -> Container(s) -> BLOB
+    BLOB Types:
+      - Block (4.75TB max) text or binary files
+      - Append (195GB max) log data
+      - Page (8TB max) frequent read/write
+          - Azure VMs use this for OS / Data Disks
+
+  - Archive Tier (infrequent data) possible hours to retrieve
+==>> Amazon S3
+
+##  Queue Storage
+##
+  - Early storage service
+  - Durable managed queuing service
+  - Useful for decoupling apps
+  - Messages up to 64KB in size
+  - Can utilize the capacity of the storage account
+  - Message lifetime 7 days
+  - Original queuing services offered by Azure
+  - NOT the same as Azure Service Bus Queues
+==>> Amazon SQS
+
+##  File Storage
+##
+  - Fully managed SMB / CIFS File Share
+  - Mounted concurrently in cloud or on premises Windows, Linux, Mac OS
+  - Alternative to on premises file servers / NAS
+  - Lift and Shift Apps that require a shared file system ***
+  - 5TB Maximum File Share Size
+==>> Amazon EFS
+
+##  Table Storage
+##
+  - Storing unstructured NoSQL data
+  - Key / Value Store
+  - As many entities and tables as you like
+    - Entity can be up to 1 MB in size (think row or document)
+  - Should use Azure Cosmos DB Table API instead
+==>> Amazon DynamoDB??
+
+
+##  Disk Storage
+##
+  - Managed or Unmanaged Disks
+  - Managed Disks take care of storage account and disks for you
+      - Pay for what you provisioned
+  - Unmanaged Disks
+      - Pay for what you use
+  - Designed for 99.999% availability - three replicas
+  - Premium  (SSD): Disk IOPS mapped to disk and not VM size
+  - Standard (HDD): Disk IOPS provisioned by VM size
+  - Sizes from 32GB to 4TB
+  - Can attach multiple disks to VM
+  - NOTE: Not all VM families support Premium disks
+==>> Amazon EBS
+
+
+
+
+
+
+
+
+
+
 
 
 
