@@ -394,32 +394,157 @@ VNET ==>> VPC
 ==>> Amazon EBS
 
 
+##########################################################################
+##  Azure Web and Mobile Services
+##########################################################################
+
+##  Azure App Service
+##
+ - Platform as a Service
+ - Managed Environment
+ - .Net, .Net Core, Java, Ruby, Node.js, PHP or Python
+ - Web Apps + APIs + Mobile Backends + Containers
+ NOTE: Azure Functions part of Azure App Service
+ - Windows and Linux
+ - Various App Service Plans (Free to Isolated Environments)
+  - Can scale and have multiple applications
+ - CI/CD Intergration w/ various services
 
 
+##  Azure API Management
+##
+ - Managed, scalable API Gateway Service
+ - Gateway
+    - Caching
+    - Authorization
+ - Developer Portal
+    - Documentation
+    - Access Requests (call /month, etc.)
+ - Publisher Portal
+    - Import Existing APIs
+    - API Products
+
+==>> AWS API Gateway
 
 
+##  Azure Media Services
+##
+ - End to End Media workflow service
+ - Upload, store, encode, package and deliver
+ - On demand or live events
+ - Protection of content via encryption
+      - AES256, DRM
+ - Streaming URL
+
+==>> AWS Elastic Transcoder
 
 
+##  Azure Notification Hubs
+##
+ - Mobile Push Notifications
+ - iOS, Android, Kindle, Baidu, Windows
+ - Segment customers based on tags
+ - Tailor by language and location
+ - Scheduled notifications
+ - Silent Push support
+    - Instruct app to do something not visible to end user
+    - Remote actions within code
+
+==>> AWS SNS
 
 
+##  Azure Search
+##
+ - Managed Search Service
+ - Full Text search using Simple or Lucene query syntax
+ - Accepts any data in JSON format
+ - Indexers can auto crawl Azure services
+    - Azure SQL DB, Cosmos DB, BLOB Storage
+ - Filter, sort, paging all supported UX features
+ - Geo based search
+    - Search based on proximity
+
+==>> AWS CloudSearch
 
 
+##########################################################################
+##  Azure Databases
+##########################################################################
+
+##  Azure SQL DB
+##
+ - Fully managed SQL Database
+ - Single DB or Elastic Pools
+    - Elastic Pools: share pool of resources across databases
+ - Billed in Database Transaction Units (DTUs)
+    - Combination of CPU, Memory, IO
+ - Shares code-base w/ MS SQL Server
+ - SQL DB gets updates first
+ - Auto-Tuning using built-in intelligence
+    - Can apply tuning automatically or manually via notification
+
+==>> AWS RDS
 
 
+##  Azure DB for MySQL and PostgreSQL
+##
+ - Managed Relational Database Service
+ - Built-in High Availability
+ - Pay as you go pricing
+    - 125 GB Standard Storage
+ - Scale up and down
+ - Auto Backup and Point in Time restore
+ NOTE:  Still in public preview
+
+==>> AWS RDS
 
 
+##  SQL Data Warehouse
+##
+ - Petabyte scale Enterprise Data Warehouse
+ - Massively Parallel Processing (MPP)
+ - Import data using PolyBase
+ - Columnar storage in relational tables
+ - Billed in Compute Data Warehouse Units (cDWUs)
+    - Combined metric of CPU and IO
+ NOTE: Pay for your storage separately, can spin down compute
+ - Elasticity or Compute Optimized performance tiers
+    - Elasticity: short bursts of peak activity
+    - Compute Optimized: Uses SSD for frequently accessed data
+
+==>> AWS RedShift
+
+##  Cosmos DB
+##
+ - Planet Scale database offering
+ - Throughput, latency and availability guarantees:
+      - 99.99%  Availability within a single region
+      - 99.999% Availability within a multi region
+      (financially backed ?!?)
+ - Turnkey Global Replication
+ - Multi Model (Document, MongoDB, Cassandra, Graph, Table)
+      - Zero management for multi-region
+ - Five consistency options from Strong SQL to Relaxed NoSQL
+      - Strong Consistency
+      - Eventual Consistency
+      - Three options in between
+ NOTE:  Automatically indexes ALL data
+
+==>> AWS DynamoDB / Global Tables
 
 
+##  Redis Cache
+##
+ - Managed Redis Cache
+ - In memory key-value store:
+ - Three Tiers:
+      - Basic Tier: single node / test dev / 53 GB
+      - Standard Tier: 2 Replicated nodes - Primary / Secondary (both 53 GB)
+            (managed by Microsoft)
+      - Premium Tier: Snapshots, VNET integration / persistence
+                        350 GB (uses sharding across nodes)
 
-
-
-
-
-
-
-
-
-
+==>> AWS Elasticache
 
 
 
