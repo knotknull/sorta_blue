@@ -548,5 +548,159 @@ VNET ==>> VPC
 
 
 
+##########################################################################
+##  Azure Data Analytics
+##########################################################################
+
+##  HDInsight
+##
+ - Fully managed open source analytics service
+ - Hadoop components from Hortonworks Data Platform (HDP)
+ - Streaming or historical data analytics
+ - Multiple open source frameworks
+    - Hadoop, Spark, Hive, LLAP, Kafka, Storm, R, etc.
+ - Batch processing, ETL, Streaming Data (IOT), Data Science (R)
+
+==>> AWS EMR
+
+##  Event Hubs
+##
+ - Large scale telemetry ingestion
+ - Millions of events per second
+ - Realtime data ingestion
+ - Capture data into Azure Blob or Data Lake
+ - Publishers send data to the event hub
+ - Consumers read data from the hub
+ - Maximum retention period of 7 days
+==>> AWS Kinesis
+
+##  Azure Data Lake Store and Analytics
+##
+ - Hyper-scale repository for analytics workloads
+      - dump data and do analysis
+ - Hadoop Distributed File System (HDFS) compatible
+ - Azure HD Insight integration
+ - Unlimited storage - No Limits
+ - Data Lake Analytics - On Demand analytics and job service
+    - Uses U-SQL Language:  SQL + User C# Code
+    - Works with data lake store and others (BLOB Store, SQL DB)
+
+##  Azure Data Factory
+##
+ - Cloud based data integration service
+ - Moves data along journey thru various systems
+ - ETL
+ - Version 2 is in preview
+    - Contains SQL Server Integration Services (SSIS) built in (V2)
+==>> AWS Data Pipeline
+
+##  Azure Analysis Services
+##
+ - Enterprise grade data modeling in the cloud
+ - Connect and Analyse disparate data services
+ - Combine that into a single semantic model for business users to query
+ - Hybrid Support (Cloud and On Prem)
+ - Built on SQL Server Analysis Services
+ - Analyze using PowerBI or other visualization tools
+
+##########################################################################
+##  Azure AI and Cognitive Services
+##########################################################################
+
+##  Azure Machine Learning
+##
+ - End to End Data Science Solution
+ - Number of Machine Learning (ML) components
+    - ML Workbench
+        - desktop app for model development and deployment
+    - ML Experimentation Service
+        - run experiments on Spark Cluster, VMs, locally
+    - ML Model Management Service
+        - package models as docker containers and deploy
+    - ML Libraries for Apache Spark
+        - build predictive models on large text to image based data sets
+           using Micrsoft Cognitive Tool Kit and OpenCV library
+    - Visual Studio Code tools for AI
+
+==>> AWS Machine Learning
+
+##  Azure Bot Service
+##
+ - Everything to create bots
+ - Bot builder SDK for developing bots
+ - Bot framework for connecting to channels
+    - Teams, Skype, Slack, Messenger
+ - 2 Deploy options ***
+    - Web App Service
+    - Azure Functions
+ - Integrates w/ LUIS Integration (Language Understanding Intelligence Service)
+    - NLP
+ - 5 bot templates
+    - Proactive callout to users, LUIS Integration, Form completion, Q and A bots
+
+==>> AWS Lex
+
+
+##  Vision  (Democratizing AI)
+##
+ - Computer Vision API: distill actional info from images
+ - Face API: detect, analyze, organize, faces in photos
+ - Content Moderator: image, text, video moderation
+ - Emotion API (preview)
+ - Custom Vision Service (preview): define own models and identify custom images
+ - Video Indexer (preview): Index, speech sentiment, brands, transcription, etc.
+
+==>> AWS Recognition
+
+
+##  Speech
+##
+ - Translator Speech API: real time translation, ppt plugin, skype translator
+ - Bing Speech API: Speech to text and text to Speech
+ - Speaker Recognition API (preview): who is speaking after training, verification
+ - Custom Speech Service (preview): custom speech models for speech to text
+
+==>> Amazon Transcribe & Amazon Polly
+
+##  Knowledge
+##
+ - QnA Maker API (preview)
+    - integrated w/ Bot Service
+    - upload FAQ and generates QnA bot
+ - Custom Decision Service (preview)
+    -  Making a decision around a particular user
+        -  relevant articles for a user
+
+##  Search
+##
+ - Bing Autosuggest: type ahead capabilities for a website
+ - Bing News Search
+ - Bing Web Search
+ - Bing Image Search
+ - Bing Video Search
+ - Bing Custom Search: create search for website
+
+##  Language
+##
+ - LUIS: Language Understanding Intelligence Service - NLP, detects intent, data
+ - Bing Spell Check
+ - Text Analytics:  sentiment analysis on text (positive, neutral, negative)
+ - Translator Text API
+
+==>> Amazon Translate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 [.]
