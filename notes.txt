@@ -636,7 +636,7 @@ VNET ==>> VPC
  - Integrates w/ LUIS Integration (Language Understanding Intelligence Service)
     - NLP
  - 5 bot templates
-    - Proactive callout to users, LUIS Integration, Form completion, Q and A bots
+    - Proactive call out to users, LUIS Integration, Form completion, Q and A bots
 
 ==>> AWS Lex
 
@@ -691,6 +691,116 @@ VNET ==>> VPC
 
 
 
+##########################################################################
+##  Azure Internet of Things
+##########################################################################
+
+##  IoT Hub
+##
+ - Fully managed IoT Gateway
+ - Connect end IoT devices connecting:
+    - AMQP /  MQTT / HTTP
+ - Bi-directional communication to millions of devices
+ - Device twins
+    - cloud based meta-data representation of a device
+ - Rules engine for routing device messages to cloud services
+ - Client side device SDKs (in C)
+ - Device provisioning service
+    - Provision devices on connection from the end user ??
+
+==>> Amazon IoT
+
+
+##  IoT Edge
+##
+ - Builds upon IoT Hub
+ - Analyze data on IoT devices
+ - Reduce Bandwidth
+ - Act as quickly as possible
+ - Containers that run Azure services on edge device
+    - AI, Machine Learning, Stream Analytics and Functions
+ - Remotely monitor and manage devices from the cloud
+
+==>> Amazon Greengrass
+
+
+##  Azure Stream Analytics
+##
+ - Real time analytics on streaming data
+ - Integrates with IoT Hub and Event Hub (1GB/sec)
+ - Can run on IoT Edge
+ - Not just for IoT data
+    - Web, etc.
+ - Simple SQL-like language
+ - User Defined Functions in Javascript
+ - Pay per job
+
+##  Time Series Insights
+##
+ - Store, Query and Visualize time series data
+ - Fully integrated into Event Hub and IoT Hub
+ - Takes data in JSON format that has clean rows and columns and indexes
+    them into column(less)? store
+ - Stores data in SSDs for up to 400 days
+ - Out of box visualization: Time Series Insights Explorer
+ - Query service bot in explorer and via API
+ - API for building custom solutions
+
+
+##########################################################################
+##  Azure Enterprise Integration
+##########################################################################
+
+##  Azure Logic Apps
+##
+ - Fully managed Integration Workflows
+ - Graphical designer
+ - Serverless
+    - Triggers: initiate logic app
+    - Actions: things to do w/ data
+ - Over 200 built-in integrations
+    - Twitter, Salesforce, Office 365, Slack, etc.
+ - Extend functionality with Azure Functions
+ - Supports conditional statements and loops
+
+==>> Amazon Step Functions
+
+##  Event Grid
+##
+ - Serverless Fully managed event routing service
+ - No polling for activity
+ - Get events from Event Publishers (Azure or other)
+    - Azure Storage Blob, IoT Hub
+ - Takes events and sends them to Event Handlers
+    - i.e. Logic Apps , Functions, webhook
+ - Guaranteed delivery within 24 hours, retry with exponential back-off
+ - Request based billing with 100K operations free per month
+
+##  Service Bus
+##
+ - Cloud Messaging as a Service
+ - Enables de-couples architectures
+ - Supports two messaging patterns
+    - Windows Communication Foundation (WCF) Relay
+        - Optimized for .Net devs
+        - easy for SOAP or REST services to communicate
+        - Server and client need to be online together to facilitate
+    - Service Bus Messaging
+        - Brokered messaging
+        - Asynchronous, decoupled
+ - Event Grid is for real time event driven reaction.
+   Service bus enables you to have temporal control
+
+==>> Amazon SQS
+
+
+##  Data Catalog
+##
+ - Managed Data Discovery and centralization service
+ - Connects to key datasets (SQL, MySQL)
+ - Data stays within the data source
+ - Data Catalog takes a copy of its' metadata and indexes it
+ - Users can then ask questions of the data.
 
 
 
