@@ -803,6 +803,73 @@ VNET ==>> VPC
  - Users can then ask questions of the data.
 
 
+##########################################################################
+##  Azure Security and Identity
+##########################################################################
+
+##  Azure Active Directory
+##
+ - Core Azure Service (Role Based Access Control)
+ - Directory and Identity Management
+ - Control access to Azure resources
+ - SSO for thousands of cloud SaaS Applications
+    - Dropbox, Salesforce, etc.
+ - Integrate into own apps for authorization / authentication
+ - Can integrate with on premises Windows AD
+
+==>> AWS IAM
+
+
+##  Azure Active Directory B2C (Biz to Consumer)
+##
+ - Consumer identity and access management
+ - Social, Enterprise or Local accounts
+    - Facebook, Google, SAML, email / password
+ - Different AD tenant to your normal Azure AD tenant
+ - Many code samples
+ - Multiple languages
+    - IOS, Andriod, Javascript, etc.
+
+==>> AWS Cognito
+
+
+##  Azure Active Directory Domain Services
+##
+ - Managed Domain services in Azure
+    - Domain Join
+    - Group Policy
+    - LDAP & Kerberos
+ - Don't have to deploy / manage domain controllers
+ - Cloud only or Hybrid Solutions
+
+==>> AWS Directory Service
+
+
+##  Key Vault
+##
+ - Secure Key Management Service
+ - Encrypt and store your keys and secrets
+ - Keys are protected by Hardware Security Modules (HSMs)
+    - Thales nShield HSM used by Microsoft
+ - Bring your own keys and have them processed by HSMs
+    - FIPS 140-2 level 2 validated HSM (US Govt Security Standard)
+ - Monitor key usage
+
+==>> AWS Key Management
+
+
+##  Security Center
+##
+ - Security Management of your cloud environment
+    - on premise as well
+ - Centralized policy management
+ - Continuous assessment (against policies, recommendations)
+    - checks for incidents / vulnerabilities
+ - Actionable recommendations
+ - Prioritized Alerting
+ - Free and Standard tiers
+    - Most advanced features require Standard tier
+    - $15 / server / month
 
 
 
