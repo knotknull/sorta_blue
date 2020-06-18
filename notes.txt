@@ -949,7 +949,12 @@ VNET ==>> VPC
 
 ##  Azure Backup
 ##
- - Failover and Failback
+ - Backup as a service
+ - Cloud and On Prem support
+ - Unlimited scaling
+ - Multiple storage options
+ - Windows Computers, Windows and SQL Server VMs on prem or in Azure
+ - Linux support for Azure VMs only
 
 
 
