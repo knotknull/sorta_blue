@@ -872,7 +872,84 @@ VNET ==>> VPC
     - $15 / server / month
 
 
+##########################################################################
+##  Azure Monitoring and Management
+##########################################################################
 
+
+##  Azure Policy
+##
+ - Governance of Azure resources
+ - Create, assign and manage policy definitions
+ - Checks for compliance against policies
+ - Green / brownfield policies
+    - Policy checked continually
+ - Can be applied at different scopes
+    - apply at resource group level
+    - apply at subscription level
+    - apply to management groups
+        - apply central policy to multiple subscriptions
+ - Policy types:
+    - only certain family of VM can be deployed
+    - all resources must have a cost center tag
+ - Policy effects, action that happens when rule met:
+    - Append: Add a default value to missing one
+    - Audit : Action allowed but alert raised
+    - Deny  : Resource creation / update denied
+
+==>> AWS Config
+
+
+##  Azure Monitor
+##
+ - Basic monitoring of resources in Azure
+ - Metrics - Performance stats (CPU Utilization, etc)
+ - Activity Log:  Resource created / changed
+ - Diagnostic Log:  Log from services themselves (NOT Activity Log)
+ - Leverage other services for "deeper" insight
+
+==>> AWS CloudWatch
+
+##  Application Insights
+##
+ - Application Performance Management (APM)
+ - .Net, Node.js, J2EE Apps
+ - Strong Visual Studio Integration for .Net
+ - Many app monitoring features
+    - analytics
+    - dashboards
+    - tracing
+    - dependency maps
+ - Not only Azure hosted apps, on-prem
+
+==>> AWS X-Ray
+
+##  Log Analytics
+##
+ - Collect Log data from various sources
+ - Agents, Azure Monitor, Diag logs
+ - Cloud and On Prem data sources
+ - Support for custom data via API
+ - Log searches, queries
+    - can create alert
+ - Create Dashboards in Azure portal
+ - Export to PowerBi and others
+
+##  Azure Site Recovery
+##
+ - Business Continuity
+ - Disaster Recovery services
+ - Cloud to Cloud  (across regions)
+ - On Prem to Cloud
+ - Recovering servers between 2 on prem sites
+ - Failover and Failback
+ - Can be used for Data Center to cloud migrations
+    - Can migrate on prem VMs to secondary location (cloud)
+
+
+##  Azure Backup
+##
+ - Failover and Failback
 
 
 
